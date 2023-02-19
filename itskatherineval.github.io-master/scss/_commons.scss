@@ -1,0 +1,91 @@
+//DEFINICION VARIABLES
+
+//Colores
+
+$grafito:#302C27;
+$celeste:#86A1A8;
+$amarillo: #d57c0a;
+$white:white;
+$footer: whitesmoke;
+
+//Paleta
+
+$paleta: (
+  'grafito':#302C27,
+  'celeste':#86A1A8,
+  'amarillo': #d57c0a,
+  'blanco': white,
+  'grisclaro': whitesmoke,);
+
+//BOTON ANIMACION
+$amarilloClaro:rgba(213, 124, 10, .7);
+$amarilloFuerte: rgba(213, 124, 10, 1.0);
+
+
+//mixing
+
+@mixin texto ($color,$font-size,$text-align){
+  color: $color;  
+  font-size: $font-size;
+  text-align: $text-align;
+}
+
+//TIPOGRAFIA
+
+$MainFont: arial,sans-serif;
+
+//Clases
+
+  .mainTitulo{
+    @include texto($grafito, 3rem, center);
+  }
+
+  .mainSubtitulo{
+    @include texto($grafito, 2rem, center);
+  }
+
+  .mainTituloCeleste{
+    @include texto($celeste, 3rem, center);
+  }
+
+  .mainTituloBlanco{
+    @include texto($white, 3rem, center);
+  }
+
+  .mainSubtituloBlanco{
+    @include texto($white, 1.7rem, center);
+  }
+
+  .mainTextoS{
+    font-size: 1rem;
+  }
+  
+  .mainTextoM{
+    font-size: 1.5rem;
+
+  }
+
+  .seccionCeleste{
+    background-color: map-get($map:$paleta, $key:'celeste');
+    color: white;
+  }
+
+  .sliderProyecto{
+    margin-bottom: 2em;
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+
+  .w-100{
+    width: 100%;
+  }
+
+  .w-50{
+    width: 50%;
+  }
+  
+  .w-40{
+    width: 40%;
+  }
+
+

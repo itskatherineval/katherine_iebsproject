@@ -1,0 +1,15 @@
+.footer{
+	background-color: whitesmoke;
+	padding-top:1.5em;
+
+	.footerLinks{
+		text-decoration: none;
+		color: black;
+
+		&:hover{
+			text-decoration: underline;
+			color: $grafito;
+		}
+	}
+
+}

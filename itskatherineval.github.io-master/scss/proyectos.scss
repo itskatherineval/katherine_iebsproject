@@ -1,0 +1,120 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "_commons";
+@import "_navbar";
+
+
+//INTRO
+header section div div article{
+
+	img{
+		width: 90%;
+		text-align: center;
+		align-items:middle;
+	}
+
+     h1{
+		padding-top:0.4em;
+		padding-bottom:0.4em;
+	}
+}
+
+
+//CARACTERISTICAS
+
+main {
+
+  	.seccionCeleste{
+		padding:2rem;
+
+		h2{
+			@include texto($white, 2.6rem, center);
+			padding-top:1rem;
+			padding-bottom:1rem;
+		}
+	}
+
+	section section div div article h3{
+		background-color:white;
+		@include texto($grafito, 1.5rem, center);
+	}
+
+	section section div div article p{
+		@include texto($white, 1.2rem, center);
+	}
+
+}
+
+
+@import "_form";
+
+
+main section section div div article section form button.btn-shop{
+			background-color:map-get($map:$paleta, $key:'amarillo');
+				
+				&:hover{
+					background:linear-gradient(to top, $amarilloClaro, $amarilloFuerte);
+					color: grey;
+					cursor: pointer;
+					transition: all 1.5s;
+			}	
+
+}
+
+
+@import "_footer";
+
+
+@media only screen and (min-width: 370px){
+	header section div div article{
+
+		img{
+		    margin-right: 1.2em;
+		    margin-left: 1.2em;
+		}
+
+		p{
+		    @include texto($grafito, 1rem, center);
+			line-height: 1.5rem;
+			padding-right:0.3em;
+			padding-left:0.3em;
+		}
+
+	}
+    
+    main h2{
+    	font-size: 2.3rem;
+    	color: #86A1A8;
+    	text-align: center;
+    	padding-top:0.5em;
+    	padding-bottom:0.5em;
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+	
+	header section div div article{
+
+		img{
+		    margin-left: 2em;
+		    margin-right: 2em;
+		}
+
+		p{
+		    @include texto($grafito, 1.2rem, center);
+			line-height: 2rem;
+			padding-right:0.6em;
+			padding-left:0.6em;
+			margin-right: 1em;
+		    margin-left: 1em;
+		}
+	}
+
+}
+
+@media only screen and (min-width: 1200px){
+	body main h2{
+		@include texto($celeste, 3rem, center);
+	}
+
+}

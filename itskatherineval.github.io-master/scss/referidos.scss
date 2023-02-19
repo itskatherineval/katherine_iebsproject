@@ -1,0 +1,135 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "_commons";
+@import "_navbar";
+
+
+
+@media only screen and (min-width: 370px){
+	header section section{
+		h1{
+			font-size: 	2rem;
+			text-align: center;
+			margin-right: 1em;
+			margin-left: 1em;
+		}
+		section div div article{
+			text-align: center;
+
+			p{
+				background-color: whitesmoke;
+				margin-left: 1em;
+				margin-right: 1em;
+				padding-top: 0.2em;
+				padding-bottom: 0.2em;
+
+
+			}
+		}
+
+	}
+
+	main section {
+
+		h3{
+			text-align: center;
+			padding-top:0.5em;
+		}
+
+
+		div article form div legend{
+		text-align: center;
+		font-size: 1.2rem;
+		padding-left:1em;
+		padding-right:1em;
+		}
+	}
+
+}
+
+@media only screen and (min-width: 768px){
+		
+	header section section h1{
+		@include texto($grafito, 2.5rem, center);
+	}
+
+	header section section section div div article h2{
+		@include texto($grafito, 1.5rem, center);
+		background-color: whitesmoke;
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+
+	header section section section div div article p{
+	   @include texto($grafito, 1rem, center);
+		background-color: whitesmoke;
+		margin-left: 3em;
+		margin-right: 3em;
+		padding-left: 1em;
+		padding-right: 1em;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
+
+	main section div article form div legend{
+		@include texto($white, 1.5rem, center);
+		padding-right: 0.5rem;
+		padding-left:0.5rem
+	}
+
+}
+
+
+@media only screen and (min-width: 1200px){
+		
+	header section section h1{
+		@include texto($grafito, 3rem, center);
+	}
+
+	header section section section div div article h2{
+		@include texto($grafito, 2rem, center);
+		background-color: whitesmoke;
+		margin-left: 0em;
+		margin-right: 0em;
+		}
+
+	header section section section div div article p{
+	   @include texto($grafito, 1rem, center);
+		background-color: whitesmoke;
+		margin-left: 0em;
+		margin-right: 0em;
+		}
+
+	main section div article form div legend{
+		@include texto($white, 2rem, center);
+		padding-right: 0rem;
+		padding-left:0rem
+	}
+}
+
+.fondoCeleste{
+	box-sizing: border-box;
+	overflow-x:hidden;
+}
+.fondoCeleste{
+	background-color: map-get($map:$paleta, $key:'celeste');
+	color: map-get($map:$paleta, $key:'blanco');
+
+	.btn-shop{
+    	background-color:map-get($map:$paleta, $key:'amarillo');
+
+        &:hover{
+	    	background:linear-gradient(to top, $amarilloClaro, $amarilloFuerte);
+			color: grey;
+			cursor: pointer;
+			transition: all 1.5s;
+        }
+    }
+
+    .btn-rounded{
+    	@extend .btn-shop;
+    	border-radius: 40px;
+    }
+
+}
+
+@import "_footer";

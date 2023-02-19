@@ -1,0 +1,135 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "_commons";
+@import "_navbar";
+
+//INTRO
+
+header section h1{
+	@include texto($celeste, 3rem,center);
+}
+
+main .seccionCeleste{
+	background-color: map-get($map:$paleta, $key:'celeste');
+	color: white;
+
+        div div article{
+			padding-right: 1em;
+			padding-left: 1em;
+			padding: 1em;
+		}
+
+			h3{
+			@include texto ($white,2rem,center);
+			}
+
+		 	p{
+			@include texto ($white,1.1rem,center);
+			line-height: 1.5em;
+			}
+
+}
+
+main section h2{
+		@include texto ($celeste, 2.8rem, center);
+}
+
+
+main section section div div article{
+			color: $grafito;
+			padding: 1em 1em;
+}
+
+
+main .confianza{
+		background-color: map-get($map:$paleta, $key:'grafito');
+	    color: white;
+
+	h3{
+		@include texto ($white,2.5rem,center);
+		padding-top:0.5em;
+	}
+
+
+}
+
+@import "_form";
+
+main section div article section button.btn-shop{
+    	background-color:map-get($map:$paleta, $key:'amarillo');
+
+				&:hover{
+			    	background:linear-gradient(to top, $amarilloClaro, $amarilloFuerte);
+					color: grey;
+					cursor: pointer;
+					transition: all 1.5s;
+		        }
+                }
+
+@import "_footer";
+
+@media only screen and (min-width: 370px){
+	
+	body header section{
+		h1{
+			font-size: 2.2rem;
+			margin-left:1em;
+			margin-right:1em;
+	}
+		p{
+			font-size: 1rem;
+			padding-left:1em;
+			padding-right:1em;
+		}
+
+
+	}
+
+	body main section p{
+		padding-left: 0.7em;
+		padding-right: 0.7em;
+	}
+
+	body main .confianza h3{
+		font-size: 2.2rem;
+		margin-left:1em;
+		margin-right:1em;
+	}
+}
+
+
+@media only screen and (min-width: 768px){
+	
+	body header section{
+		h1{
+			font-size: 3rem;
+	}
+		p{
+			font-size: 1.2rem;
+			padding-left:1em;
+			padding-right:1em;
+		}
+
+	}
+
+	body main .seccionCeleste div div article p{
+			padding-right: 1em;
+			padding-left: 1em;
+		}
+	body main section p{
+			padding-right: 1.5em;
+			padding-left: 1.5em;
+	}
+	body main .confianza h3{
+		font-size: 2.2rem;
+		padding-top:1.5em;
+	}
+}
+
+
+@media only screen and (min-width: 1200px){
+	body main .confianza h3{
+		font-size: 2.5rem;
+		padding-top:1em;
+	}
+
+}

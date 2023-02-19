@@ -1,0 +1,136 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "_commons";
+@import "_navbar";
+
+//SLIDER
+.carousel-caption{
+	text-align: center;
+}
+
+
+//INICIA PRODUCTOS
+
+main section div h1{
+	@include texto($grafito, 3rem, center);
+	padding-bottom:0.5em;
+}
+
+
+main section div div article h2{
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+
+main section div div article p{
+		@include texto(#302C27, 1.2rem, center);
+		line-height: 1rem;
+		padding-bottom:0.2em;
+}
+
+main section div div article .scale1:hover{
+	transform: scale(0.98);
+	cursor: pointer;
+	transition: transform 3s;
+}
+
+main section div div article a.btn-shop{
+			background-color:map-get($map:$paleta, $key:'amarillo');
+				
+				&:hover{
+					background:linear-gradient(to top, $amarilloClaro, $amarilloFuerte);
+					color: grey;
+					cursor: pointer;
+					transition: all 1.5s;
+		}
+		}
+
+@import "_form";
+
+main section div article form section button.btn-shop{
+			background-color:map-get($map:$paleta, $key:'amarillo');
+				
+				&:hover{
+					background:linear-gradient(to top, $amarilloClaro, $amarilloFuerte);
+					color: grey;
+					cursor: pointer;
+					transition: all 1.5s;
+		}	
+        }
+
+@import "_footer";
+
+@media only screen and (min-width: 370px){
+	main section div h1{
+		font-size: 	2rem;
+	}
+
+	header div div div .carousel-caption p{
+			font-size: 0.8rem;
+		}
+
+	header div div div .carousel-caption img{
+			width: 30%;
+		}
+
+}
+
+
+@media only screen and (min-width: 768px){
+	body header div div div div p{
+				font-size: 1rem;
+	}
+
+	main section div h1{
+		font-size: 	2.5rem;
+	}
+	
+	header div div div .carousel-caption img{
+			width: 50%;
+		}
+
+	header div div div .carousel-caption p{
+			font-size: 2.5rem;
+		}
+}
+
+@media only screen and (min-width: 1200px){
+	body header div div div div p{
+				font-size: 2rem;
+	}
+
+	main section div h1{
+		font-size: 	3rem;
+	}
+
+	header div div div .carousel-caption img{
+			width: 50%;
+		}
+
+	header div div div .carousel-caption p{
+			font-size: 2.5rem;
+		}
+}
+
+
+//CLASES PARA TÉRMINOS Y POLITICAS
+
+  .mainTituloCeleste{
+    @include texto(#86A1A8, 3rem, center);
+    padding-top:1em;
+    padding-bottom:1em;
+  }
+
+  .mainSubtituloGrafito{
+    font-size: 1.8rem;
+    color:white;
+    background-color:#86A1A8;
+    padding-top:0.4em;
+    padding-bottom:0.4em;
+    padding-left:0.5em;
+
+  }
+
+  .mainTextGrafito{
+    font-size: 1rem;
+    padding-left:0.3em;
+  }

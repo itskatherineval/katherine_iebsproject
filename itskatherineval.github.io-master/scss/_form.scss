@@ -1,0 +1,62 @@
+
+.form{
+	 background-color: map-get($map:$paleta, $key:'celeste');
+	 color: map-get($map:$paleta, $key:'blanco');
+    }
+
+.tituloForm{
+		@include texto(white, 2.8rem, center);
+		padding-bottom: 0.4em;
+		padding-top: 0.4em;
+	}
+
+.subtituloForm{
+		@include texto(white, 1.7rem, center);
+		padding-bottom:0.2em;
+
+}
+
+.imgEstilo{
+	margin-top: 3.5em;
+	border-radius:1em;
+	margin-bottom: 1em;
+}
+
+
+@media only screen and (min-width: 370px){
+	.tituloForm{
+		@include texto(white, 2.2rem, center);
+		padding-bottom: 0em;
+		padding-top: 0.4em;
+	}
+
+	.imgEstilo{
+	margin-top: 1.5em;
+	}
+
+}
+
+
+@media only screen and (min-width: 768px){
+	.tituloForm{
+		@include texto(white, 2.8rem, center);
+		padding-bottom: 0.4em;
+		padding-top: 0.4em;
+	}
+
+	.subtituloForm{
+		padding-top:0.5em;
+		padding-bottom:0.5em;
+	}
+
+	.imgEstilo{
+	margin-top: 3.5em;
+	}
+}
+
+@media only screen and (min-width: 1200px){
+	.subtituloForm{
+		padding-top:0em;
+		padding-bottom:0.2em;
+	}
+}
